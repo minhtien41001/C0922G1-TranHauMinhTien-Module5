@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>List Facility</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: url("https://cdn.wallpapersafari.com/97/50/eRwDMy.jpg");
+        }
+        form {
+            background-image: url("https://img.rawpixel.com/s3fs-private/rawpixel_images/website_content/v960-ning-30.jpg?w=800&dpr=1&fit=default&crop=default&q=65&vib=3&con=3&usm=15&bg=F4F4F3&ixlib=js-2.2.1&s=63dd5f402645ef52fb7dfb592aec765a");
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        input:invalid {
+            border-color: red;
+        }
+        input:valid {
+            border-color: green;
+        }
+    </style>
+    <style>
+        .header {
+            background-image: url("https://img.wallpapersafari.com/desktop/1600/900/22/47/iU4Gez.jpg");
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        .footer {
+            position: absolute;
+            bottom: 0;
+            background-image: url("https://wallpaperaccess.com/full/3953563.jpg");
+        }
+        .left {
+            overflow: hidden;
+            height: 520px;
+        }
+        .left:hover {
+            overflow: scroll;
+        }
+        .zoom:hover {
+            transform: scale(1.2);
+        }
+        .body {
+            background-image: url("https://media.istockphoto.com/photos/abstract-blur-blue-gradient-color-background-with-bokeh-round-light-picture-id1310553941?b=1&k=20&m=1310553941&s=170667a&w=0&h=ceXJ-ZDLHlygjY53FQTNp5xpQ9lqRCkjD-RMJGUSvp0=");
+        }
+    </style>
+</head>
+<body>
+<div class="container-fluid bg-gray-500 d-flex header" style="height: 100px">
+    <img class="h-100 p-4" src="https://www.furama.com/images/LOGOFurama_4C_Normal.png" alt="">
+    <img class="ms-5 ps-5" src="https://furamavietnam.com/wp-content/uploads/2019/02/Ariyana-Tourism-Complex-02-2.png"
+         alt="">
+
+    <div class="container-fluid text-end my-4 me-4">
+        <span class="badge text-bg-warning mt-3">Trần Hậu Minh Tiến</span>
+    </div>
+</div>
+
+<nav class="navbar navbar-expand-lg bg-light">
+    <div class="container-fluid mx-5">
+        <a class="navbar-brand font-weight-bold" href="/">Home</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item dropdown ms-3">
+                    <a class="nav-link text-dark" href="/employee" role="button" >Employee</a>
+                </li>
+
+                <li class="nav-item dropdown ms-3">
+                    <a class="nav-link text-dark" href="/customer/list" role="button" >Customer</a>
+                </li>
+
+                <li class="nav-item dropdown ms-3">
+                    <a class="nav-link text-dark" href="/facility/list" role="button" >Facility</a>
+                </li>
+
+                <li class="nav-item dropdown ms-3">
+                    <a class="nav-link text-dark" href="/contract/list" role="button" >Contract</a>
+                </li>
+            </ul>
+
+            <form class="d-flex my-2" role="search">
+                <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i></button>
+            </form>
+        </div>
+    </div>
+</nav>
+<div class="row">
+    <div class="col-lg-4">
+        <div class="row card" style="width: 20rem;margin: 50px">
+            <img src="https://cdn.daynauan.info.vn/wp-content/uploads/2019/05/bi-quyet-chon-hai-san-tuoi-ngon.jpg" style="height: 195px" class="card-img-top" alt="...">
+            <div class="card-body ">
+                <label class="card-text"><b>OCEAN DELUXE</b></label><br>
+                <i class="card-text">Room size: 40.1 m<sup>2</sup></i>
+                <i class="card-text" style="margin-left: 35px"><a style="text-decoration: none;color: #218838" href="https://www.vntrip.vn/cam-nang/review-furama-resort-da-nang-102606"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                </svg>know more</a></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="row card" style="width: 20rem;margin: 50px">
+            <img src="https://phuquocsensetravel.com/view/at_nhung-trai-nghiem-ban-nen-thu-o-dao-phu-quoc_91dd4e26297a26386e345742c100fb19.jpg" style="height: 195px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <label class="card-text"><b>GARDEN SUPERIOR</b></label><br>
+                <i class="card-text">Room size:  40.1 m<sup>2</sup></i>
+                <i class="card-text" style="margin-left: 35px"><a style="text-decoration: none;color: #218838" href="https://www.vntrip.vn/cam-nang/review-furama-resort-da-nang-102606"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                </svg>know more</a></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="row card" style="width: 20rem;margin: 50px;">
+            <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-2.jpg" style="height: 195px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <label class="card-text"><b>GARDEN DELUXE</b></label><br>
+                <i class="card-text">Room size:  40.1 m<sup>2</sup></i>
+                <i class="card-text" style="margin-left: 35px"><a style="text-decoration: none;color: #218838" href="https://www.vntrip.vn/cam-nang/review-furama-resort-da-nang-102606"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                </svg>know more</a></i>
+            </div>
+        </div>
+    </div>
+</div><div class="row">
+    <div class="col-lg-4">
+        <div class="row card" style="width: 20rem;margin: 50px">
+            <img src="https://cdn.daynauan.info.vn/wp-content/uploads/2019/05/bi-quyet-chon-hai-san-tuoi-ngon.jpg" style="height: 195px" class="card-img-top" alt="...">
+            <div class="card-body ">
+                <label class="card-text"><b>BEACH FRONT VILLAS</b></label><br>
+                <i class="card-text">Room size: 40.1 m<sup>2</sup></i>
+                <i class="card-text" style="margin-left: 35px"><a style="text-decoration: none;color: #218838" href="https://www.vntrip.vn/cam-nang/review-furama-resort-da-nang-102606"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                </svg>know more</a></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="row card" style="width: 20rem;margin: 50px">
+            <img src="https://phuquocsensetravel.com/view/at_nhung-trai-nghiem-ban-nen-thu-o-dao-phu-quoc_91dd4e26297a26386e345742c100fb19.jpg" style="height: 195px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <label class="card-text"><b>POOL VILLAS</b></label><br>
+                <i class="card-text">Room size: 40.1 m<sup>2</sup></i>
+                <i class="card-text" style="margin-left: 35px"><a style="text-decoration: none;color: #218838" href="https://www.vntrip.vn/cam-nang/review-furama-resort-da-nang-102606"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                </svg>know more</a></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="row card" style="width: 20rem;margin: 50px;">
+            <img src="https://cdn.vntrip.vn/cam-nang/wp-content/uploads/2020/06/Review-Furama-Resort-Da-Nang-2.jpg" style="height: 195px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <label class="card-text"><b>OCEAN SUITE</b></label><br>
+                <i class="card-text">Room size: 40.1 m<sup>2</sup></i>
+                <i class="card-text" style="margin-left: 35px"><a style="text-decoration: none;color: #218838" href="https://www.vntrip.vn/cam-nang/review-furama-resort-da-nang-102606"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                </svg>know more</a></i>
+            </div>
+        </div>
+    </div>
+</div><div class="row">
+    <div class="col-lg-4">
+        <div class="row card" style="width: 20rem;margin: 50px">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSewZTbFLVYdDPo-vbesaFUfZHjPSLaXJeASQ&usqp=CAU" style="height: 195px" class="card-img-top" alt="...">
+            <div class="card-body ">
+                <label class="card-text"><b>OCEAN STUDIO SUITE</b></label><br>
+                <i class="card-text">Room size: 40.1 m<sup>2</sup></i>
+                <i class="card-text" style="margin-left: 35px"><a style="text-decoration: none;color: #218838" href="https://www.vntrip.vn/cam-nang/review-furama-resort-da-nang-102606"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                </svg>know more</a></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="row card" style="width: 20rem;margin: 50px">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Kt_Nan3IWvBTVZ3-lxnuAPt7Tg2HCZpdHA&usqp=CAU" style="height: 195px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <label class="card-text"><b>LAGOON SUPERIOR</b></label><br>
+                <i class="card-text">Room size: 40.1 m<sup>2</sup></i>
+                <i class="card-text" style="margin-left: 35px"><a style="text-decoration: none;color: #218838" href="https://www.vntrip.vn/cam-nang/review-furama-resort-da-nang-102606"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                </svg>know more</a></i>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="row card" style="width: 20rem;margin: 50px;">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRqI1i0H-7s4pX5LZ_xwq9ukeGGZIE-fUQdkA&usqp=CAU" style="height: 195px" class="card-img-top" alt="...">
+            <div class="card-body">
+                <label class="card-text"><b>GARDEN SUPERIOR</b></label><br>
+                <i class="card-text">Room size: 40.1 m<sup>2</sup></i>
+                <i class="card-text" style="margin-left: 35px"><a style="text-decoration: none;color: #218838" href="https://www.vntrip.vn/cam-nang/review-furama-resort-da-nang-102606"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-exclamation-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                    <path d="M7.002 11a1 1 0 1 1 2 0 1 1 0 0 1-2 0zM7.1 4.995a.905.905 0 1 1 1.8 0l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 4.995z"/>
+                </svg>know more</a></i>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>
