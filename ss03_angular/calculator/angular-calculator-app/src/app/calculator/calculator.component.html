@@ -1,0 +1,23 @@
+<h1 style="color: #1976d2">Calculator</h1>
+
+<table cellpadding="5">
+  <tr>
+    <td>Number 1:</td>
+    <td colspan="3"><input type="number" [(ngModel)]="num1"/></td>
+  </tr>
+  <tr>
+    <td>Number 2:</td>
+    <td colspan="3"><input type="number" [(ngModel)]="num2"/></td>
+  </tr>
+
+  <tr>
+    <td><button (click)="getAddition()">+</button></td>
+    <td><button (click)="getSubtraction()">-</button></td>
+    <td><button (click)="getMultiplication()">*</button></td>
+    <td><button (click)="getDivision()">/</button></td>
+  </tr>
+
+  <tr>
+    <td colspan="4" ><h3 style="color: #1976d2">Kết quả: {{result}}</h3></td>
+  </tr>
+</table>
