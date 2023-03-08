@@ -8,28 +8,28 @@ import { Component, OnInit } from '@angular/core';
 export class CalculatorComponent implements OnInit {
   num1 = 0;
   num2 = 0;
-  result : any;
+  result ?: string | number;
   constructor() { }
 
   ngOnInit(): void {
   }
 
-  getAddition(){
+  getAddition() {
     this.result = this.num1 + this.num2;
   }
 
-  getSubtraction(){
+  getSubtraction() {
     this.result = this.num1 - this.num2;
   }
 
-  getMultiplication(){
+  getMultiplication() {
     this.result = this.num1 * this.num2;
   }
 
-  getDivision(){
-    if (this.num2 == 0){
-      this.result = "Không thể chia cho 0!"
-    }else {
+  getDivision() {
+    if (this.num2 === 0) {
+      this.result = 'Không thể chia cho 0!';
+    } else {
       this.result = this.num1 / this.num2;
     }
   }

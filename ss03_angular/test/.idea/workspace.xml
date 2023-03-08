@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c265b80f-1da5-422f-8b0f-fd46c224a8f4" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../../ss02_typescript/fibonaci/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../ss02_typescript/fibonaci/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../cs_module5/contract/list.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../cs_module5/customer/create.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
