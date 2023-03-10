@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <title>Register Form</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<form  novalidate [formGroup]="rfRegister" (ngSubmit)="add()">
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email </label>
+    <input type="email" class="form-control" formControlName="email" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    <p style="color: red" *ngIf="rfRegister.controls.email.hasError('required')&&rfRegister.controls.email.touched"> cannot be left blank</p>
+    <p style="color: red" *ngIf="rfRegister.controls.email.touched && rfRegister.controls.email.hasError('email')">abc</p>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputPassword1">Password</label>
+    <input type="password" class="form-control" formControlName="password" id="exampleInputPassword1" placeholder="Password">
+    <p style="color: red" *ngIf="rfRegister.controls.password.touched && rfRegister.controls.password.hasError('required')"> cannot be left blank</p>
+    <p style="color: red" *ngIf="rfRegister.controls.password.touched && rfRegister.controls.password.hasError('minlength')"> at least 6 characters</p>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputConfirmPassword1">Confirm Password</label>
+    <input type="confirmPassword" class="form-control" formControlName="confirmPassword" id="exampleInputConfirmPassword1" placeholder="ConfirmPassword">
+    <p style="color: red" *ngIf="rfRegister.controls.confirmPassword.touched && rfRegister.controls.confirmPassword.hasError('required')"> cannot be left blank</p>
+    <p style="color: red" *ngIf="rfRegister.controls.confirmPassword.touched && rfRegister.controls.confirmPassword.hasError('minlength')"> at least 6 characters</p>
+    <p style="color: red" *ngIf="rfRegister.controls.confirmPassword.touched && rfRegister.controls.confirmPassword.hasError('checkPass')"> ...</p>
+
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputCountry">Country</label>
+    </div>
+    <select class="custom-select" id="inputCountry">
+      <option selected>Country...</option>
+      <option value="1">Hà Tĩnh </option>
+      <option value="2">Quảng Bình</option>
+      <option value="3">Đà Nẵng </option>
+    </select>
+  </div>
+
+  <div class="form-group">
+    <label for="exampleInputAge">Age</label>
+    <input type="age" class="form-control" formControlName="age" id="exampleInputAge" placeholder="Age">
+    <p style="color: red" *ngIf="rfRegister.controls.age.touched && rfRegister.controls.age.hasError('required')"> cannot be left blank</p>
+    <p style="color: red" *ngIf="rfRegister.controls.age.touched && rfRegister.controls.age.hasError('min')"> age must be more than 18</p>
+
+  </div>
+
+  <div class="input-group mb-3">
+    <div class="input-group-prepend">
+      <label class="input-group-text" for="inputGender">Gender</label>
+    </div>
+    <select class="custom-select" id="inputGender">
+      <option selected>Gender...</option>
+      <option value="1">Male</option>
+      <option value="2">Female</option>
+      <option value="3">Bede</option>
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPhone">Phone</label>
+    <input type="phone" class="form-control" formControlName="phone" id="exampleInputPhone" placeholder="Phone">
+    <p style="color: red" *ngIf="rfRegister.controls.phone.touched && rfRegister.controls.phone.hasError('required')"> cannot be left blank</p>
+    <p style="color: red" *ngIf="rfRegister.controls.phone.touched && rfRegister.controls.phone.hasError('pattern')">Please enter the correct format</p>
+  </div>
+  <div class="form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+    <label class="form-check-label" for="exampleCheck1">Check me out</label>
+  </div>
+  <button [disabled]="rfRegister.invalid" type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+
+<!-- Optional JavaScript -->
+<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+</html>
