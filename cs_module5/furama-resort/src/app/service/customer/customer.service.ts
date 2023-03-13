@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
 import {Customer} from "../../model/customer/customer";
 
 @Injectable({
@@ -9,12 +8,12 @@ export class CustomerService {
   customerList: Customer[] =[{
     id: 1,
     name: "Cafe",
-    dateOfBirth: "17-11-1999",
+    dateOfBirth: "04-10-2001",
     gender: 1,
-    idCard: "2232323",
-    phoneNumber: "0799061071",
-    email: "gamquangvinh@gmail.com",
-    address: "Quang Binh",
+    idCard: "123123",
+    phoneNumber: "0837790795",
+    email: "tranminhtien41001@gmail.com",
+    address: "Ha Tinh",
     customerType: {
       id: 1,
       name: "Diamond"

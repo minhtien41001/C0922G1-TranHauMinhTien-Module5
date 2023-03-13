@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {Contract} from "../../../model/contract/contract";
+import {ContractService} from "../../../service/contract/contract.service";
 
 @Component({
   selector: 'app-list-contract',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListContractComponent implements OnInit {
 
-  constructor() { }
+  contractList: Contract[];
+  constructor(private contractService: ContractService) { }
 
   ngOnInit(): void {
+    this.getAll();
   }
 
+  private getAll() {
+    this.contractList = this.contractService.getAll()
+  }
 }

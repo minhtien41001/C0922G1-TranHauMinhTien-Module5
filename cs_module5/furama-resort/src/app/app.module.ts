@@ -16,7 +16,7 @@ import { ListContractComponent } from './component/contract/list-contract/list-c
 import { CreateContractComponent } from './component/contract/create-contract/create-contract.component';
 import {HttpClientModule} from "@angular/common/http";
 
-let FacilityComponent;
+
 
 @NgModule({
   declarations: [
@@ -25,14 +25,14 @@ let FacilityComponent;
     NavbarComponent,
     FooterComponent,
     NavigationComponent,
-  /*  FacilityComponent,
-    CreateFacilityComponent,
+   /* FacilityComponent,*/
+    // CreateFacilityComponent,
     ListFacilityComponent,
-    EditFacilityComponent,
-    CreateCustomerComponent,*/
+    // EditFacilityComponent,
+    // CreateCustomerComponent,*/
     ListCustomerComponent,
-   /* EditCustomerComponent,
-    ListContractComponent,*/
+   /* EditCustomerComponent,*/
+    ListContractComponent,
     /*CreateContractComponent,*/
   ],
   imports: [
