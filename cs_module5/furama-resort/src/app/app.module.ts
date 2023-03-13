@@ -6,7 +6,6 @@ import { HomeComponent } from './component/home/home.component';
 import { NavbarComponent } from './component/header/navbar.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { NavigationComponent } from './component/navigation/navigation.component';
-import { FacilityComponent } from './component/facility/facility.component';
 import { CreateFacilityComponent } from './component/facility/create-facility/create-facility.component';
 import { ListFacilityComponent } from './component/facility/list-facility/list-facility.component';
 import { EditFacilityComponent } from './component/facility/edit-facility/edit-facility.component';
@@ -15,6 +14,9 @@ import { ListCustomerComponent } from './component/customer/list-customer/list-c
 import { EditCustomerComponent } from './component/customer/edit-customer/edit-customer.component';
 import { ListContractComponent } from './component/contract/list-contract/list-contract.component';
 import { CreateContractComponent } from './component/contract/create-contract/create-contract.component';
+import {HttpClientModule} from "@angular/common/http";
+
+let FacilityComponent;
 
 @NgModule({
   declarations: [
@@ -23,18 +25,19 @@ import { CreateContractComponent } from './component/contract/create-contract/cr
     NavbarComponent,
     FooterComponent,
     NavigationComponent,
-    FacilityComponent,
+  /*  FacilityComponent,
     CreateFacilityComponent,
     ListFacilityComponent,
     EditFacilityComponent,
-    CreateCustomerComponent,
+    CreateCustomerComponent,*/
     ListCustomerComponent,
-    EditCustomerComponent,
-    ListContractComponent,
-    CreateContractComponent
+   /* EditCustomerComponent,
+    ListContractComponent,*/
+    /*CreateContractComponent,*/
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
