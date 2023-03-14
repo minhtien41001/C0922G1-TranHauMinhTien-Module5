@@ -7,7 +7,7 @@
 
   <nav class="navbar navbar-expand-lg py-0 my-0">
     <div class="container-fluid">
-      <a href="/facility/create">
+      <a routerLink="facility/create">
         <button class="btn btn-success btn-outline-secondary btn-sm">
           <span class="fa-solid fa-house-medical text-light h5 my-auto me-1"></span>
           <span class="text-light"> Add new Facility</span>
@@ -47,7 +47,7 @@
 
     <tbody align="center">
     <tr *ngFor="let item of facilityList; index as i">
-      <td>{{item+i }}</td>
+      <td>{{i+1}}</td>
       <td>{{item.name}}</td>
       <td>{{item.area}}</td>
       <td>{{item.cost |number}} <sup><i class="fa-solid fa-dong-sign"></i></sup></td>

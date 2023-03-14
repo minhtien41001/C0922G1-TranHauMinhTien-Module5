@@ -9,7 +9,8 @@ import {ProductService} from '../../service/product.service';
 })
 export class ProductListComponent implements OnInit {
   products: Product[] = [];
-
+  temp: Product = {};
+  p= 1;
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
@@ -17,10 +18,21 @@ export class ProductListComponent implements OnInit {
   }
 
   private getAll() {
-    this.products = this.productService.getAll();
+    this.productService.getAll().subscribe(product => {
+      this.products = product;
+    });
   }
 
   remove(id: number) {
-    this.productService.remove(id);
+    this.productService.deleteProduct(id);
+  }
+
+  deleteProduct() {
+    if (this.temp.id != null) {
+      this.productService.deleteProduct(this.temp.id).subscribe(data => {
+        this.getAll()
+        alert("Xoa thanh cong")
+      })
+    }
   }
 }

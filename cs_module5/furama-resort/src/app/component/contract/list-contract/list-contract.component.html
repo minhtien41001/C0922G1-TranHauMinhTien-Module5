@@ -29,12 +29,13 @@
 
     <tbody>
   <tr *ngFor="let contract of contractList; index as i">
-    <td>{{contract+i}}</td>
+    <td>{{i+1}}</td>
     <td>{{contract.startDate}}</td>
     <td>{{contract.endDate}}</td>
     <td>{{contract.deposit}}</td>
-    <td>{{contract.customer.name}}</td>
     <td>{{contract.facility.name}}</td>
+    <td>{{contract.customer.name}}</td>
+
 
 
        <!-- <button th:attr="onclick=|addContractdetail('${contract.id}')|"

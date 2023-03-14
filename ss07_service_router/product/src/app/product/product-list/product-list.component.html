@@ -7,6 +7,7 @@
     <td>Tên</td>
     <td>Giá</td>
     <td>Mô tả</td>
+    <td>Category</td>
     <td>Chỉnh sửa </td>
     <td>Xóa </td>
   </tr>
@@ -15,6 +16,7 @@
     <td>{{product.name}}</td>
     <td>{{product.price}}</td>
     <td>{{product.description}}</td>
+    <td>{{product.category?.name}}</td>
     <td >
       <button [routerLink]="['/product/update',product.id]">
         Edit
@@ -22,10 +24,32 @@
     </td>
     <td>
       <!-- Button trigger modal -->
-      <button (click)="remove(product.id)" type="button" >
-        Delete
-      </button>
-    </td>
+    <td><button class="btn-outline-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = product">Delete</button></td>
   </tr>
 </table>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     data-bs-keyboard="false" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <h3 class="text-danger text-center">Bạn có chắc muốn xóa thông tin của sản phẩm này không?</h3>
+        <div class="row text-primary">
+          <div class="col-3"><h4>ID:</h4></div>
+          <div class="col-9"><h4>{{temp.id}}</h4></div>
+        </div>
+        <div class="row text-primary">
+          <div class="col-3"><h4>Name:</h4></div>
+          <div class="col-9"><h4>{{temp.name}}</h4></div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="deleteProduct()">Save changes
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 

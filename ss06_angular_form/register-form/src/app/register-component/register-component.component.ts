@@ -9,7 +9,6 @@ import {ListRegister} from "../model/list-register";
 })
 export class RegisterComponentComponent implements OnInit {
   rfRegister: FormGroup;
-  listRegister: ListRegister [] = []
 
   constructor() { }
 
@@ -31,8 +30,5 @@ export class RegisterComponentComponent implements OnInit {
       return {NoMatch: true}
     }
     return null;
-  }
-
-  add() {
   }
 }

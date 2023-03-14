@@ -9,16 +9,16 @@ export class ContractService {
 
   contractList: Contract[] =[{
     id: 1,
-    startDate: "Villa Beach Front",
-    endDate: "h",
-    deposit: "h",
+    startDate: "04-10-2001",
+    endDate: "10-10-2001",
+    deposit: "abcxyz",
     customer: {
       id: 1,
-      name: "villa"
+      name: "Tran Minh Tien"
     },
     facility: {
       id: 1,
-      name: "year"
+      name: "Villa Beach Front"
     }}];
   constructor() {
      this.getAll()
