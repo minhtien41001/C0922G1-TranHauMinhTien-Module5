@@ -18,10 +18,7 @@
 <form [formGroup]="productForm" (ngSubmit)="update()">
   <table class="table">
     <tbody>
-    <tr>
-      <td>Mã sản phẩm:</td>
-      <td><input type="number" formControlName="id"></td>
-    </tr>
+    <input type="text" formControlName="id" hidden>
     <tr>
       <td>Tên sản phẩm:</td>
       <td><input type="text" formControlName="name"></td>

@@ -9,13 +9,23 @@ import {FacilityService} from "../../../service/facility/facility.service";
 })
 export class ListFacilityComponent implements OnInit {
   facilityList: Facility[] = [];
+  temp: Facility = {};
   constructor(private facilityService: FacilityService) { }
 
   ngOnInit(): void {
     this.getAll();
   }
 
-  private getAll() {
-    this.facilityList = this.facilityService.getAllFacility();
+  getAll() {
+   this.facilityService.getAllFacility().subscribe(data =>{
+     this.facilityList = data
+   })
+  }
+
+  delete() {
+    this.facilityService.delete(this.temp.id).subscribe(data =>{
+      console.log(data)
+      alert("xoa thanh cong");
+    })
   }
 }

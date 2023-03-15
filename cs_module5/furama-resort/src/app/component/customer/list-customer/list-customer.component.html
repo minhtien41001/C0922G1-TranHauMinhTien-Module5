@@ -85,11 +85,35 @@
     <td>{{item.email}}</td>
     <td>{{item.address}}</td>
     <td> {{item.customerType.name}}</td>
-    <!--      <td><button class="btn btn-outline-warning"><a [routerLink]="['/customer/edit',item.id]">Edit</a></button></td>-->
-    <!--      <td><button class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = item" >Delete</button></td>-->
+    <td>
+      <button class="btn btn-outline-success" [routerLink]="['/customer/update',item.id]" >Edit</button>
+    </td>
+    <td>
+      <a class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = item">
+        Delete
+      </a>
+    </td>
   </tr>
   </tbody>
 </table>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     data-bs-keyboard="false" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <p >Bạn có chắc muốn xóa thông tin của: "{{temp.name}}"</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="deleteCustomer()">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
 </body>
 </html>
 <app-footer></app-footer>

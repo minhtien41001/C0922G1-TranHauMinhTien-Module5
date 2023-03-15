@@ -7,10 +7,10 @@
 
   <nav class="navbar navbar-expand-lg py-0 my-0">
     <div class="container-fluid">
-      <a routerLink="facility/create">
+      <a routerLink="/facility/create">
         <button class="btn btn-success btn-outline-secondary btn-sm">
           <span class="fa-solid fa-house-medical text-light h5 my-auto me-1"></span>
-          <span class="text-light"> Add new Facility</span>
+          <span class="text-light"> Add new Customer</span>
         </button>
       </a>
 
@@ -57,38 +57,39 @@
       <td>{{item.poolArea}}</td>
       <td>{{item.numberOfFloors}}</td>
       <td>{{item.facilityFree}}</td>
-      <td *ngIf="item.rentType">{{item.rentType?.name}}</td>
-      <td *ngIf="item.facilityType">{{item.facilityType?.name}}</td>
-      <td></td>
-      <td></td>
+      <td>{{item.facilityType.name}}</td>
+      <td>{{item.rentType.name}}</td>
+      <td>
+        <button class="btn btn-outline-success" [routerLink]="['/customer/update',item.id]" >Edit</button>
+      </td>
+      <td>
+        <a class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = item">
+          Delete
+        </a>
+      </td>
     </tr>
     </tbody>
   </table>
 
 
-<!--  <div class="modal fade" id="deleteFacility" tabindex="-1" aria-labelledby="exampleModalLabel1"-->
-<!--       aria-hidden="true">-->
-<!--    <div class="modal-dialog">-->
-<!--      <div class="modal-content modalCSS">-->
-<!--        <div class="modal-header">-->
-<!--          <h4 class="modal-title" id="exampleModalLabel1">Bạn có chắc chắn muốn xóa?</h4>-->
-<!--          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>-->
-<!--        </div>-->
-
-<!--        <form >-->
-<!--          <div class="modal-body">-->
-<!--            <span class="h6">Facility: </span><strong id="nameDelete" class="text-danger ps-2"></strong>-->
-<!--            <input type="hidden" name="idDelete" id="idDelete" readonly/>-->
-<!--          </div>-->
-
-<!--          <div class="modal-footer">-->
-<!--            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>-->
-<!--            <button type="submit" class="btn btn-danger" value="delete">Xóa</button>-->
-<!--          </div>-->
-<!--        </form>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+       data-bs-keyboard="false" data-bs-backdrop="static">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+        </div>
+        <div class="modal-body">
+          <p >Bạn có chắc muốn xóa thông tin của: "{{temp.name}}"</p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="delete()">
+            Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
 </body>
 

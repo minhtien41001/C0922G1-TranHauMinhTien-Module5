@@ -1,20 +1,15 @@
 {
   "customer": [
     {
-      "id": 1,
-      "customerCode": "KH-1111",
-      "customerType": {
+      "title": "aaaaaaaccccccc",
+      "writer": "aaaaaassaaassaaaaaaa",
+      "content": "aaaaaaa",
+      "dateCreated": "2022-11-08T17:00:00.000+00:00",
+      "category": {
         "id": 1,
-        "name": "Diamond"
+        "categoryName": "AAAAAAA"
       },
-      "name": "Nguyễn Thị Hào",
-      "dateOfBirth": "1970-11-07",
-      "idCard": "643431213",
-      "phoneNumber": "0945423362",
-      "gender": false,
-      "email": "thihao07@gmail.com",
-      "address": "23 Nguyễn Hoàng, Đà Nẵng",
-      "flagDelete": false
+      "id": 1
     },
     {
       "id": 2,
@@ -103,27 +98,11 @@
         "id": 1,
         "name": "Diamond"
       },
-      "name": "Nguyễn Mỹ Kim",
+      "name": "Nguyễn Mỹ Kimmmmm",
       "dateOfBirth": "1984-04-08",
       "idCard": "856453123",
       "phoneNumber": "0912345698",
-      "gender": false,
-      "email": "kimcuong84@gmail.com",
-      "address": "K123/45 Lê Lợi, Hồ Chí Minh",
-      "flagDelete": false
-    },
-    {
-      "id": 8,
-      "customerCode": "KH-1111",
-      "customerType": {
-        "id": 1,
-        "name": "Diamond"
-      },
-      "name": "Nguyễn Mỹ Kim",
-      "dateOfBirth": "1984-04-08",
-      "idCard": "856453123",
-      "phoneNumber": "0912345698",
-      "gender": false,
+      "gender": "0",
       "email": "kimcuong84@gmail.com",
       "address": "K123/45 Lê Lợi, Hồ Chí Minh",
       "flagDelete": false
@@ -138,6 +117,78 @@
       "email": "minhtien2001@gmail.com",
       "address": "HaTinh",
       "customerType": "Silver"
+    },
+    {
+      "id": 10,
+      "name": null,
+      "dateOfBirth": null,
+      "gender": null,
+      "idCard": null,
+      "phoneNumber": null,
+      "email": null,
+      "address": null,
+      "customerType": {
+        "id": 4,
+        "name": "Silver"
+      }
+    },
+    {
+      "id": 11,
+      "name": null,
+      "dateOfBirth": null,
+      "gender": null,
+      "idCard": null,
+      "phoneNumber": null,
+      "email": null,
+      "address": null,
+      "customerType": null
+    },
+    {
+      "id": 12,
+      "name": null,
+      "dateOfBirth": null,
+      "gender": null,
+      "idCard": null,
+      "phoneNumber": null,
+      "email": null,
+      "address": null,
+      "customerType": {
+        "id": 3,
+        "name": "Gold"
+      }
+    },
+    {
+      "id": 13,
+      "name": null,
+      "dateOfBirth": null,
+      "gender": null,
+      "idCard": null,
+      "phoneNumber": null,
+      "email": null,
+      "address": null,
+      "customerType": null
+    },
+    {
+      "id": 14,
+      "name": null,
+      "dateOfBirth": null,
+      "gender": null,
+      "idCard": null,
+      "phoneNumber": null,
+      "email": null,
+      "address": null,
+      "customerType": null
+    },
+    {
+      "id": 15,
+      "name": null,
+      "dateOfBirth": null,
+      "gender": null,
+      "idCard": null,
+      "phoneNumber": null,
+      "email": null,
+      "address": null,
+      "customerType": null
     }
   ],
   "customerType": [
@@ -163,28 +214,6 @@
     }
   ],
   "facility": [
-    {
-      "id": 1,
-      "name": "Villa Beach Front",
-      "area": 2500,
-      "cost": 1000000,
-      "maxPeople": 10,
-      "facilityType": {
-        "id": 1,
-        "name": "villa"
-      },
-      "rentType": {
-        "id": 3,
-        "name": "date"
-      },
-      "standardRoom": "vip",
-      "descriptionOtherConvenience": "Có hồ bơi",
-      "poolArea": 500,
-      "numberOfFloors": 4,
-      "facilityFree": "",
-      "flagDelete": false,
-      "img": "https://file4.batdongsan.com.vn/2020/06/03/JGcIp0rf/20200603142344-7089.jpg"
-    },
     {
       "id": 2,
       "name": "House Princess 01",

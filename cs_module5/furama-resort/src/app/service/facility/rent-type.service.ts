@@ -1,9 +1,15 @@
 import { Injectable } from '@angular/core';
+import {HttpClient} from "@angular/common/http";
+import {RentType} from "../../model/facility/rent-type";
 
 @Injectable({
   providedIn: 'root'
 })
 export class RentTypeService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) {}
+  getAllRentType(){
+    return this.httpClient.get<RentType[]>("http://localhost:3000/rent-type")
+  }
+
 }

@@ -13,6 +13,9 @@ import {HttpClientModule} from "@angular/common/http";
 import {AppRoutingModule} from "./app-routing.module";
 import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { CreateCustomerComponent } from './component/customer/create-customer/create-customer.component';
+import {EditCustomerComponent} from "./component/customer/edit-customer/edit-customer.component";
+import {CreateFacilityComponent} from "./component/facility/create-facility/create-facility.component";
+import {EditFacilityComponent} from "./component/facility/edit-facility/edit-facility.component";
 
 
 @NgModule({
@@ -23,11 +26,11 @@ import { CreateCustomerComponent } from './component/customer/create-customer/cr
     FooterComponent,
     NavigationComponent,
    /* FacilityComponent,*/
-    // CreateFacilityComponent,
+    CreateFacilityComponent,
     ListFacilityComponent,
-    // EditFacilityComponent,
+    EditFacilityComponent,
     ListCustomerComponent,
-   /* EditCustomerComponent,*/
+    EditCustomerComponent,
     ListContractComponent,
     CreateCustomerComponent,
     /*CreateContractComponent,*/
