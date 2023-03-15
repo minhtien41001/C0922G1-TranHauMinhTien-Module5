@@ -1,0 +1,35 @@
+{
+  "classes": [
+    {
+      "id": 1,
+      "name": "C0922G1"
+    },
+    {
+      "id": 2,
+      "name": "C1022G1"
+    },
+    {
+      "id": 3,
+      "name": "C1122G1"
+    },
+    {
+      "id": 4,
+      "name": "C1222G1"
+    }
+  ],
+  "students": [
+    {
+      "id": 1,
+      "name": "Tran Minh Tien",
+      "phoneNumber": "0837790795",
+      "address": "Ha Tinh",
+      "email": "tranminhtien41001@gmail.com",
+      "dateOfBirth": "2001-10-04",
+      "gender": "1",
+      "class": {
+        "id": 1,
+        "name": "C0922G1"
+      }
+    }
+  ]
+}

@@ -10,6 +10,7 @@ import { ProductUpdateComponent } from './product/product-update/product-update.
 import { CategoryListComponent } from './category/category-list/category-list.component';
 
 import {HttpClientModule} from '@angular/common/http';
+import {SharedModule} from './shared/shared.module';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import {HttpClientModule} from '@angular/common/http';
         BrowserModule,
         AppRoutingModule,
         ReactiveFormsModule,
-        HttpClientModule
+        HttpClientModule,
+      SharedModule
     ],
   providers: [],
   bootstrap: [AppComponent]
