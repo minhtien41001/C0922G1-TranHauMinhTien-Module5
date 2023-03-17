@@ -1,0 +1,78 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "LG"
+    },
+    {
+      "id": 2,
+      "name": "SAMSUNG"
+    },
+    {
+      "id": 3,
+      "name": "APPLE"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "Iphone XXXX",
+      "price": "100000",
+      "description": "màu đen",
+      "category": {
+        "id": 3,
+        "name": "APPLE"
+      }
+    },
+    {
+      "id": 2,
+      "name": "Samsung note 10",
+      "price": "100000",
+      "description": "màu đen",
+      "category": {
+        "id": 2,
+        "name": "SAMSUNG"
+      }
+    },
+    {
+      "id": 3,
+      "name": "LG-1",
+      "price": "100000",
+      "description": "màu đen",
+      "category": {
+        "id": 1,
+        "name": "LG"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Trương Vô Kỵ",
+      "price": "0373213122",
+      "description": "Võ Đang",
+      "category": {
+        "id": 2,
+        "name": "SAMSUNG"
+      }
+    },
+    {
+      "id": 7,
+      "name": "Tôn Ngộ Khônggggg",
+      "price": "49345345",
+      "description": "Hoa Quả Sơn",
+      "category": {
+        "id": 1,
+        "name": "LG"
+      }
+    },
+    {
+      "id": 8,
+      "name": "Dương Quá",
+      "price": "3323",
+      "description": "China",
+      "category": {
+        "id": 2,
+        "name": "SAMSUNG"
+      }
+    }
+  ]
+}

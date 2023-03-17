@@ -1,0 +1,82 @@
+<a routerLink="/create">
+  <button class="btn btn-success btn-outline-secondary btn-sm">
+    <span class="fa-solid fa-house-medical text-light h5 my-auto me-1"></span>
+    <span class="text-light"> Add new Customer</span>
+  </button>
+</a>
+<!--<nav class="navbar navbar-light bg-light">-->
+<!--  <div class="container-fluid">-->
+<!--    <form class="d-flex">-->
+<!--      <input #name class="form-control me-2" type="search" placeholder="Search name" aria-label="Search">-->
+<!--      <input #gender class="form-control me-2" type="search" placeholder="Search gender" aria-label="Search">-->
+<!--      <select #chucVu class="form-select me-2" aria-label="Default select example">-->
+<!--        <option  selected value="">Chon lop</option>-->
+<!--        <option *ngFor="let chucVu of chucvuList">{{chucVu.name}} </option>-->
+<!--      </select>-->
+<!--      <button class="btn btn-outline-success" type="submit" (click)="searchNhanvien(name.value,gender.value,chucVu.value)">Search</button>-->
+<!--    </form>-->
+<!--  </div>-->
+<!--</nav>-->
+
+
+
+
+<table id="studentTable" class="table table-light table-striped table-bordered">
+  <thead>
+  <tr class="table-dark text-light">
+    <th>Id</th>
+    <th>So xe</th>
+    <th>Loai xe</th>
+    <th>Ten Nha Xe</th>
+    <th>Diem Di</th>
+    <th>Diem Den</th>
+    <th>So dien thoai</th>
+    <th>Email</th>
+    <th>Gio Khoi Hanh</th>
+    <th class="text-center">Edit</th>
+    <th class="text-center">Delete</th>
+  </tr>
+  </thead>
+  <tbody   *ngIf="benxeList">
+  <tr *ngFor="let item of benxeList | paginate: { itemsPerPage: 4, currentPage: p }; index as i">
+    <td>{{i+1}}</td>
+    <td>{{item.bienSoXe}}</td>
+    <td>{{item.loaiXe.tenLoaiXe}}</td>
+    <td>{{item.tenNhaXe}}</td>
+    <td> {{item.diemDi}}</td>
+    <td> {{item.diemDen}}</td>
+    <td>{{item.soDienThoai}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.gioKhoiHanh}}</td>
+
+    <td>
+      <button class="btn btn-outline-success" [routerLink]="['/update',item.id]" >Edit</button>
+    </td>
+    <td>
+      <a class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = item" >
+        Delete
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<!--<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
+
+<!--<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"-->
+<!--     data-bs-keyboard="false" data-bs-backdrop="static">-->
+<!--  <div class="modal-dialog">-->
+<!--    <div class="modal-content">-->
+<!--      <div class="modal-header">-->
+<!--      </div>-->
+<!--      <div class="modal-body">-->
+<!--        <p >Bạn có chắc muốn xóa thông tin của: "{{temp.bienSoXe}}"</p>-->
+<!--      </div>-->
+<!--      <div class="modal-footer">-->
+<!--        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>-->
+<!--        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="deletebenxe()">-->
+<!--          Delete-->
+<!--        </button>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--  </div>-->
+<!--</div>-->

@@ -1,1 +1,75 @@
-<p>student-list works!</p>
+<a routerLink="/create">
+  <button class="btn btn-success btn-outline-secondary btn-sm">
+    <span class="fa-solid fa-house-medical text-light h5 my-auto me-1"></span>
+    <span class="text-light"> Add new Customer</span>
+  </button>
+</a>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <form class="d-flex">
+      <input #name class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <input #email class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <select #classes class="form-select me-2" aria-label="Default select example">
+        <option selected value="">Chon lop</option>
+        <option *ngFor="let class of classList">{{class.name}}</option>
+      </select>
+      <button class="btn btn-outline-success" type="submit" (click)="searchStudent(name.value,email.value,classes.value)">Search</button>
+    </form>
+  </div>
+</nav>
+<table id="studentTable" class="table table-light table-striped table-bordered">
+  <thead>
+  <tr class="table-dark text-light">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Phone</th>
+    <th>Address</th>
+    <th>Email</th>
+    <th>Date Of Birth</th>
+    <th>Gender</th>
+    <th>Class</th>
+    <th class="text-center">Edit</th>
+    <th class="text-center">Delete</th>
+  </tr>i
+  </thead>
+  <tbody   *ngIf="studentList">
+  <tr *ngFor="let item of studentList | paginate: { itemsPerPage: 1, currentPage: p }; index as i">
+    <td>{{i+1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.phoneNumber}}</td>
+    <td>{{item.address}}</td>
+    <td>{{item.email}}</td>
+    <td>{{item.dateOfBirth}}</td>
+    <td *ngIf="item.gender == 1">Nam</td>
+    <td *ngIf="item.gender == 0">Nữ</td>
+    <td> {{item.class.name}}</td>
+    <td>
+      <button class="btn btn-outline-success" [routerLink]="['/update',item.id]" >Edit</button>
+    </td>
+    <td>
+      <a class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = item" >
+        Delete
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<pagination-controls (pageChange)="p = $event"></pagination-controls>
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     data-bs-keyboard="false" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <p >Bạn có chắc muốn xóa thông tin của: "{{temp.name}}"</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="deleteStudent()">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

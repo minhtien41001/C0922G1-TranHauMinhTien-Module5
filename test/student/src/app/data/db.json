@@ -19,17 +19,66 @@
   ],
   "students": [
     {
-      "id": 1,
-      "name": "Tran Minh Tien",
-      "phoneNumber": "0837790795",
-      "address": "Ha Tinh",
-      "email": "tranminhtien41001@gmail.com",
-      "dateOfBirth": "2001-10-04",
-      "gender": "1",
+      "id": 3,
+      "name": "Diệp Tấn em của Diệp Vấn",
+      "phoneNumber": "490039241",
+      "address": "Chuồng Chó",
+      "email": "nguyenngoctan@gmail.com",
+      "dateOfBirth": "2023-04-02",
+      "gender": "0",
       "class": {
         "id": 1,
         "name": "C0922G1"
       }
+    },
+    {
+      "id": 4,
+      "name": "Diệp Tấn em của Diệp Vấn",
+      "phoneNumber": "490039241",
+      "address": "Chuồng Chó",
+      "email": "nguyenngoctan@gmail.com",
+      "dateOfBirth": "2023-04-02",
+      "gender": "0",
+      "class": {
+        "id": 4,
+        "name": "C1222G1"
+      }
+    },
+    {
+      "id": 5,
+      "name": "Tôn Ngộ Không",
+      "phoneNumber": "490039241",
+      "address": "Hoa Quả Sơn",
+      "email": "ngokhongcute@gmail.com",
+      "dateOfBirth": "2023-04-01",
+      "gender": "0",
+      "class": {
+        "id": 4,
+        "name": "C1222G1"
+      }
+    },
+    {
+      "id": 6,
+      "name": "Trương Vô Kỵ",
+      "phoneNumber": "0373213122",
+      "address": "Võ Đang",
+      "email": "truongvokyvip@gmail.com",
+      "dateOfBirth": "2023-04-08",
+      "gender": "0",
+      "class": {
+        "id": 2,
+        "name": "C1022G1"
+      }
+    },
+    {
+      "id": 7,
+      "name": "",
+      "phoneNumber": "",
+      "address": "",
+      "email": "",
+      "dateOfBirth": "",
+      "gender": "",
+      "class": ""
     }
   ]
 }

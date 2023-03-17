@@ -1,0 +1,68 @@
+<a routerLink="/create">
+  <button class="btn btn-success btn-outline-secondary btn-sm">
+    <span class="fa-solid fa-house-medical text-light h5 my-auto me-1"></span>
+    <span class="text-light"> Create Product</span>
+  </button>
+</a>
+<nav class="navbar navbar-light bg-light">
+  <div class="container-fluid">
+    <div class="d-flex">
+      <input #name class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <input #description class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+      <select #category  class="form-select me-2" aria-label="Default select example">
+        <option selected value="">Category</option>
+        <option *ngFor="let category of categoryList">{{category.name}}</option>
+      </select>
+      <button class="btn btn-outline-success" type="submit" (click)="searchProduct(name.value,description.value,category.value)">Search</button>
+    </div>
+  </div>
+</nav>
+<table id="studentTable" class="table table-light table-striped table-bordered">
+  <thead>
+  <tr class="table-dark text-light">
+    <th>Id</th>
+    <th>Name</th>
+    <th>Price</th>
+    <th>Description</th>
+    <th>Category</th>
+    <th class="text-center">Edit</th>
+    <th class="text-center">Delete</th>
+  </tr>
+  </thead>
+  <tbody   *ngIf="productList">
+  <tr *ngFor="let item of productList ; index as i">
+    <td>{{i+1}}</td>
+    <td>{{item.name}}</td>
+    <td>{{item.price}}</td>
+    <td>{{item.description}}</td>
+    <td>{{item.category.name}}</td>
+    <td>
+      <button class="btn btn-outline-success" [routerLink]="['/edit',item.id]" >Edit</button>
+    </td>
+    <td>
+      <a class="btn btn-outline-success" data-bs-toggle="modal" data-bs-target="#exampleModal" (click)="temp = item" >
+        Delete
+      </a>
+    </td>
+  </tr>
+  </tbody>
+</table>
+<!--<pagination-controls (pageChange)="p = $event"></pagination-controls>-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+     data-bs-keyboard="false" data-bs-backdrop="static">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      </div>
+      <div class="modal-body">
+        <p >Bạn có chắc muốn xóa thông tin của: "{{temp.name}}"</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" data-bs-dismiss="modal" class="btn btn-primary" (click)="deleteProduct()">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,142 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css">
+  <title>Add new Customer</title>
+  <style>
+    a {
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    input:invalid {
+      border-color: red;
+    }
+    input:valid {
+      border-color: green;
+    }
+  </style>
+</head>
+<body>
+<div class="mx-5 px-5 pt-3">
+  <h2 class="text-center fw-bold">Edit</h2>
+
+  <p class="text-center">
+    <a href=""><i class="fa-solid fa-backward"></i> Back to list</a>
+  </p>
+
+
+  <div class="d-flex justify-content-center">
+
+    <form class="w-50 border border-2 border-success p-3 rounded"
+          method="post" [formGroup]="formUpdateBenxe" (ngSubmit)="submit()" >
+      <input type="text" formControlName="id" hidden>
+      <div class="form-group">
+        <label for="bsx" class="h6" >Bien so xe:</label>
+        <p style="color: red" ></p>
+        <div class="input-group">
+          <input type="text" id="bsx" class="form-control" placeholder="Input " formControlName="bsx"  >
+          <span class="input-group-text"><i class="fa-solid fa-person-circle-question"></i></span>
+        </div>
+      </div>
+         <p style="color: red" *ngIf="formUpdateBenxe.controls.bsx.touched && formUpdateBenxe.controls.bsx.hasError('required')"> Không được để trống</p>
+
+
+      <div class="mt-3 form-group">
+        <label for="loaiXe" class="h6">Loai xe:</label>
+        <p style="color: red" ></p>
+        <div class="input-group">
+          <input type="text" id="loaiXe" class="form-control"   placeholder="Input"  formControlName="loaiXe">
+          <span class="input-group-text"><i class="fa-solid fa-square-phone"></i></span>
+        </div>
+      </div>
+      <p style="color: red" *ngIf="formUpdateBenxe.controls.loaiXe.touched && formUpdateBenxe.controls.loaiXe.hasError('required')"> Không được để trống</p>
+
+
+      <div class="mt-3 form-group">
+        <label for="tenNhaXe" class="h6">Ten nha xe:</label>
+        <p style="color: red" ></p>
+        <div class="input-group">
+          <input type="text" id="tenNhaXe" class="form-control"  placeholder="Input " formControlName="tenNhaXe">
+          <span class="input-group-text"><i class="fa-solid fa-map-location-dot"></i></span>
+        </div>
+      </div>
+      <p style="color: red" *ngIf="formUpdateBenxe.controls.tenNhaXe.touched && formUpdateBenxe.controls.tenNhaXe.hasError('required')"> Không được để trống</p>
+
+
+      <div class="form-outline mb-4">
+        <label for="diemDi">Diem di</label>
+        <select id="diemDi" formControlName="diemDi" class="form-select" [compareWith]="compareWith">
+          <option value="">------</option>
+<!--          <option *ngFor="let d of diemdiList" [ngValue]="d" >{{d.name}}</option>-->
+        </select>
+      </div>
+      <p style="color: red" *ngIf="formUpdateBenxe.controls.diemDi.touched && formUpdateBenxe.controls.diemDi.hasError('required')"> Không được để trống</p>
+
+
+
+      <div class="form-outline mb-4">
+        <label for="diemDen">Diem den</label>
+        <select id="diemDen" formControlName="diemDen" class="form-select" [compareWith]="compareWith1">
+          <option value="">---Class---</option>
+<!--          <option *ngFor="let d of diemdiList" [ngValue]="d" >{{d.name}}</option>-->
+        </select>
+      </div>
+      <p style="color: red" *ngIf="formUpdateBenxe.controls.diemDen.touched && formUpdateBenxe.controls.diemDen.hasError('required')"> Không được để trống</p>
+
+
+      <div class="mt-3 form-group">
+        <label for="sdt" class="h6">So dien thoai:</label>
+        <p style="color: red" ></p>
+        <div class="input-group">
+          <input type="text" id="sdt" class="form-control"  placeholder="Input " formControlName="sdt">
+          <span class="input-group-text"><i class="fa-solid fa-map-location-dot"></i></span>
+        </div>
+      </div>
+      <p style="color: red" *ngIf="formUpdateBenxe.controls.sdt.touched && formUpdateBenxe.controls.sdt.hasError('required')"> Không được để trống</p>
+      <p style="color: red" *ngIf="formUpdateBenxe.controls.sdt.touched && formUpdateBenxe.controls.sdt.hasError('pattern')"> Khong dung dinh dang</p>
+
+
+      <div class="mt-3 form-group">
+        <label for="email" class="h6">Email:</label>
+        <p style="color: red"></p>
+        <div class="input-group">
+          <input type="text" id="email" class="form-control"  placeholder="Input Email" name="email" formControlName="email">
+          <span class="input-group-text"><i class="fa-solid fa-envelope-circle-check"></i></span>
+        </div>
+      </div>
+      <p style="color: red" *ngIf="formUpdateBenxe.controls.email.touched && formUpdateBenxe.controls.email.hasError('required')"> Không được để trống</p>
+      <p style="color: red" *ngIf="formUpdateBenxe.controls.email.touched && formUpdateBenxe.controls.email.hasError('email')"> Khong dung dinh dang</p>
+
+
+      <div class="mt-3 form-group">
+        <label for="gioKhoiHanh" class="h6">Gio Khoi Hanh:</label>
+        <p style="color: red" ></p>
+        <div class="input-group">
+          <input type="text" id="gioKhoiHanh" class="form-control"  placeholder="Input " formControlName="gioKhoiHanh">
+          <span class="input-group-text"><i class="fa-solid fa-map-location-dot"></i></span>
+        </div>
+      </div>
+      <p style="color: red" *ngIf="formUpdateBenxe.controls.gioKhoiHanh.touched && formUpdateBenxe.controls.gioKhoiHanh.hasError('required')"> Không được để trống</p>
+
+
+      <div class="mt-3 text-center">
+        <button class="btn btn-info btn-outline-success btn-sm border border-2 border-success text-dark">
+<!--                [disabled]="formUpdateBenxe.invalid">-->
+
+          -- Save <i class="fa-solid fa-floppy-disk"></i> --
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa"
+        crossorigin="anonymous"></script>
+</body>
+</html>

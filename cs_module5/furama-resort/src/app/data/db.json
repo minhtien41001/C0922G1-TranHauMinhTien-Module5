@@ -12,38 +12,6 @@
       "id": 1
     },
     {
-      "id": 2,
-      "customerCode": "KH-1111",
-      "customerType": {
-        "id": 3,
-        "name": "Gold"
-      },
-      "name": "Tôn Ngộ Không",
-      "dateOfBirth": "1992-08-08",
-      "idCard": "123123",
-      "phoneNumber": "0954333333",
-      "gender": "1",
-      "email": "ngokhongcute@gmail.com",
-      "address": "Hoa Quả Sơn",
-      "flagDelete": false
-    },
-    {
-      "id": 3,
-      "customerCode": "KH-0001",
-      "customerType": {
-        "id": 1,
-        "name": "Diamond"
-      },
-      "name": "Trương Vô Kỵ",
-      "dateOfBirth": "1990-02-27",
-      "idCard": "488645199",
-      "phoneNumber": "0373213122",
-      "gender": "1",
-      "email": "truongvokyvip@gmail.com",
-      "address": "Võ Đang",
-      "flagDelete": false
-    },
-    {
       "id": 4,
       "customerCode": "KH-1111",
       "customerType": {
@@ -217,28 +185,6 @@
       "facilityFree": "",
       "flagDelete": false,
       "img": "https://www.bhg.com/thmb/0Fg0imFSA6HVZMS2DFWPvjbYDoQ=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/white-modern-house-curved-patio-archway-c0a4a3b3-aa51b24d14d0464ea15d36e05aa85ac9.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Room Twin 01",
-      "area": 5000,
-      "cost": 1000000,
-      "maxPeople": 2,
-      "facilityType": {
-        "id": 3,
-        "name": "room"
-      },
-      "rentType": {
-        "id": 4,
-        "name": "hours"
-      },
-      "standardRoom": "normal",
-      "descriptionOtherConvenience": "Có tivi",
-      "poolArea": 0,
-      "numberOfFloors": 0,
-      "facilityFree": "1 xe máy, 1 xe đạp",
-      "flagDelete": false,
-      "img": "https://www.thespruce.com/thmb/2_Q52GK3rayV1wnqm6vyBvgI3Ew=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/put-together-a-perfect-guest-room-1976987-hero-223e3e8f697e4b13b62ad4fe898d492d.jpg"
     }
   ],
   "rent-type": [

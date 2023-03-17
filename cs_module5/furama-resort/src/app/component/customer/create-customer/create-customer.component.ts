@@ -33,6 +33,7 @@ export class CreateCustomerComponent implements OnInit {
   ngOnInit(): void {
     this.customerService.getAllCustomerType().subscribe(data =>{data
       this.customerTypeList = data;
+
     })
   }
 

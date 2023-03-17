@@ -1,0 +1,52 @@
+{
+  "diemden": [
+    {
+      "id": 1,
+      "name": "Ha Noi"
+    },
+    {
+      "id": 2,
+      "name": "Vinh"
+    },
+    {
+      "id": 3,
+      "name": "Sai Gon"
+    }
+  ],
+  "benxe": [
+    {
+      "id": 4,
+      "bsx": "12314242424",
+      "loaiXe": "Giường Nằmmmmmmmmmmmmmmmmmmmmmm",
+      "tenNhaXe": "Mai Linhhhhhhhhhh",
+      "diemDi": {
+        "id": 2,
+        "name": "Ha Tinh"
+      },
+      "diemDen": {
+        "id": 1,
+        "name": "Da Nang"
+      },
+      "sdt": "0837790795",
+      "email": "tranminhtien41001@gmail.com",
+      "gioKhoiHanh": "12:30"
+    },
+    {
+      "id": 6,
+      "bsx": "1231 ",
+      "loaiXe": "Giường Nằm ",
+      "tenNhaXe": "Mai Linh ",
+      "diemDi": {
+        "id": 2,
+        "name": "Ha Tinh"
+      },
+      "diemDen": {
+        "id": 1,
+        "name": "Da Nang"
+      },
+      "sdt": "0837790795",
+      "email": "tranminhtien41001@gmail.com",
+      "gioKhoiHanh": "12:30"
+    }
+  ]
+}
